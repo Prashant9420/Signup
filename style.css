@@ -25,6 +25,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 h2{
@@ -116,4 +117,22 @@ top: -5px;
 }
 .register p a:hover{
     text-decoration: underline;
+}
+.form-box::before{
+    
+    position:absolute;
+    width: 350%;
+    height: 350%;
+    content:'';
+    background-image: conic-gradient(transparent, transparent, transparent, #bdae915a);
+    animation: rotate_border 14s cubic-bezier(0.56, 0.01, 0.07, 0.8) infinite;
+
+}
+@keyframes rotate_border{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
