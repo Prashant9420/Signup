@@ -15,13 +15,13 @@ section{
     background-size: cover;
 }
 .form-box{
-    position: relative;
+    position:fixed;
     width: 400px;
     height: 600px;
     background: transparent;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(1px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,16 +118,41 @@ top: -5px;
 .register p a:hover{
     text-decoration: underline;
 }
-.form-box::before{
+.anime{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.anime::before{
     
     position:absolute;
     width: 350%;
     height: 350%;
     content:'';
-    background-image: conic-gradient(transparent, transparent, transparent, #bdae915a);
-    animation: rotate_border 14s cubic-bezier(0.56, 0.01, 0.07, 0.8) infinite;
+    background-image: conic-gradient(transparent, transparent, transparent, #c7a5625a);
+    animation: rotate_border 7s cubic-bezier(0.56, 0.01, 0.07, 0.8) infinite;
 
 }
+.anime::after{
+    
+    position:absolute;
+    width: 350%;
+    height: 350%;
+    content:'';
+    background-image: conic-gradient(transparent, transparent, transparent, #aba7a15a);
+    animation: rotate_border 14s cubic-bezier(0.86, 0.03, 0.09, 0.7) infinite;
+
+}
+
 @keyframes rotate_border{
     0%{
         transform: rotate(0deg);
